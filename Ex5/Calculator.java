@@ -2,28 +2,6 @@ public class Calculator {
 	private double x;
 	private double y;
 	
-	public int getX() {
-		return (int) x;
-	}
-	
-	public int getY() {
-		return (int) y;
-	}
-	
-	public void setX() {
-       	System.out.println("Please insert the first number");
-		String str = System.console().readLine();
-	    Integer num1 = Integer.parseInt(str);
-		this.x = num1;
-	}
-	
-	public void setY() {
-    	System.out.println("Please insert the second number");
-		String str = System.console().readLine();
-	    Integer num2 = Integer.parseInt(str);
-		this.y = num2;
-	}
-	
 	public int choice() {
 		// Gives a selection of possible parameters
 		System.out.println("Please pick from one of the following:");
@@ -82,6 +60,7 @@ public class Calculator {
 		System.out.println( "...                            ...");
 		System.out.println( "... Calculator App is starting ...");
 		System.out.println( "...                            ...");
+			
 		boolean finished = false;
 		do {
 			Calculator picker = new Calculator();
@@ -89,34 +68,24 @@ public class Calculator {
     	    switch ( picker.choice() ) {
     	        case 1:
     	        	// add
-     	    	    picker.setX();
-     	    	    picker.setY();
-    	        	picker.add(picker.getX(), picker.getY());
+    	        	picker.add(this.getVal(),this.getVal());
     	        	break;  	        
     	        case 2:
     	        	// subtract
-     	    	    picker.setX();
-     	    	    picker.setY();
-    	        	picker.subtract(picker.getX(), picker.getY());
+    	        	picker.subtract(this.getVal(),this.getVal());
     	           	break;
     	        case 3:
     	        	// multiply
-     	    	    picker.setX();
-     	    	    picker.setY();
-    	        	picker.multiply(picker.getX(), picker.getY());
+    	        	picker.multiply(this.getVal(),this.getVal());
     	           	break;
     	        case 4:
     	        	// divide
-     	    	    picker.setX();
-     	    	    picker.setY();
-    	        	picker.divisor(picker.getX(), picker.getY());
-    	           	break;
+    	        	picker.divisor(this.getVal(),this.getVal());
+    	         	break;
     	        case 5:
-    	        	// divide
-     	    	    picker.setX();
-     	    	    picker.setY();
-    	        	picker.mod(picker.getX(), picker.getY());
-    	           	break;  
+    	        	// modulus
+    	        	picker.mod(this.getVal(),this.getVal());
+    	        	break;  
     	        case 0:
     	        	// finish
     	        	finished = true;
@@ -129,6 +98,10 @@ public class Calculator {
 		System.out.println("...Calculator App closing down.");	
 	}
 	
+	public int getVal() {
+       	System.out.println("Please insert number");
+		return Integer.parseInt(System.console().readLine());
+	}
 	/**
 	 * Main class for sets up new class 
 	 */
