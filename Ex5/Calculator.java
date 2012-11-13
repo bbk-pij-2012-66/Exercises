@@ -53,9 +53,16 @@ public class Calculator {
 	}
 	
 	public void multiply(int x, int y) {
-		// Subtractor
+		// Multiplier
 		System.out.println ( "...                            ..." );
 		System.out.println("The answer for " + x + " TIMES " + y + " is " + (x * y));;
+		System.out.println ( "...                            ..." );
+	}
+	
+	public void divisor(int x, int y) {
+		// Division
+		System.out.println ( "...                            ..." );
+		System.out.println("The answer for " + x + " DIVIDED BY " + y + " is " + (x / y));;
 		System.out.println ( "...                            ..." );
 	}
 	
@@ -87,19 +94,22 @@ public class Calculator {
     	        	// multiply
      	    	    picker.setX();
      	    	    picker.setY();
-    	        	picker.subtract(picker.getX(), picker.getY());
+    	        	picker.multiply(picker.getX(), picker.getY());
     	           	break;
     	        case 4:
-    	        // divide
-    	        break;
+    	        	// divide
+     	    	    picker.setX();
+     	    	    picker.setY();
+    	        	picker.divisor(picker.getX(), picker.getY());
+    	           	break;   	        
     	        case 0:
-    	        //finish
-    	        finished = true;
-    	        break;
+    	        	// finish
+    	        	finished = true;
+    	        	break;
     	        default:
-    	        System.out.println( "That was not a valid choice! Please try again." );
-    	        break;
-    	    } 				
+    	        	System.out.println( "That was not a valid choice! Please try again." );
+    	        	break;
+    	    }
 		} while (!finished);
 		System.out.println ( "...Calculator App closing down." );	
 	}
