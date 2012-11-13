@@ -51,6 +51,14 @@ public class Calculator {
 		System.out.println("The answer for " + x + " MINUS " + y + " is " + (x - y));;
 		System.out.println ( "...                            ..." );
 	}
+	
+	public void multiply(int x, int y) {
+		// Subtractor
+		System.out.println ( "...                            ..." );
+		System.out.println("The answer for " + x + " TIMES " + y + " is " + (x * y));;
+		System.out.println ( "...                            ..." );
+	}
+	
 	/**
 	 * launching class
 	 */
@@ -71,15 +79,16 @@ public class Calculator {
     	        	break;  	        
     	        case 2:
     	        	// subtract
-    	        	// add
      	    	    picker.setX();
      	    	    picker.setY();
     	        	picker.subtract(picker.getX(), picker.getY());
-    	        	break; 
-    	        break;
+    	           	break;
     	        case 3:
-    	        // multiply
-    	        break;
+    	        	// multiply
+     	    	    picker.setX();
+     	    	    picker.setY();
+    	        	picker.subtract(picker.getX(), picker.getY());
+    	           	break;
     	        case 4:
     	        // divide
     	        break;
