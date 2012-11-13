@@ -1,10 +1,18 @@
 public class Point {
-	double x;
-	double y;
+	private double x;
+	private double y;
 	
-	Point(double x, double y) {
+	public Point(double x, double y) {
 		this.x = x;
 		this.y = y;
+	}
+	
+	public double getX() {
+		return x;
+	}
+	
+	public double getY() {
+		return y;
 	}
 	
 	void moveTo(Point remote) {
@@ -15,10 +23,10 @@ public class Point {
 	
 	public void launch() {
 		Point point = new Point(1,1);
-		System.out.println ( "The point is now at " + point.x + "," + point.y );
+		System.out.println ( "The point is now at " + point.getX() + "," + point.getY() );
 		Point remotePoint = new Point(10,18);
 		point.moveTo(remotePoint);
-		System.out.println ( "The point is now at " + point.x + "," + point.y );
+		System.out.println ( "The point is now at " + point.getX() + "," + point.getY() );
 	}
 
 	public static void main(String[] args) {
