@@ -1,35 +1,81 @@
-import java.io.Console;
-
 public class Calculator {
-
-	/**
-	 * @param args
-	 */
-
+	private double x;
+	private double y;
+	
+	public int getX() {
+		return (int) x;
+	}
+	
+	public int getY() {
+		return (int) y;
+	}
+	
+	public void setX() {
+       	System.out.println("Please insert the first number");
+		String str = System.console().readLine();
+	    Integer num1 = Integer.parseInt(str);
+		this.x = num1;
+	}
+	
+	public void setY() {
+    	System.out.println("Please insert the second number");
+		String str = System.console().readLine();
+	    Integer num2 = Integer.parseInt(str);
+		this.y = num2;
+	}
+	
+	public int choice() {
+		// Gives a selection of possible parameters
+		System.out.println("Please pick from one of the following:");
+		System.out.println("1 For 'Adding'");
+		System.out.println("2 For 'Subtracting'");
+		System.out.println("3 For 'Multiplication'");
+		System.out.println("4 For 'Division'");
+		System.out.println("0 to close...");
+		
+		String str = System.console().readLine();
+	    Integer picked = Integer.parseInt(str);
+		return picked;
+	}
+	
+	public void add(int x, int y) {
+		// Adder
+		System.out.println ( "...                            ..." );
+		System.out.println("The answer for " + x + " PLUS " + y + " is " + (x + y));;
+		System.out.println ( "...                            ..." );
+	}
+	
+	public void subtract(int x, int y) {
+		// Subtractor
+		System.out.println ( "...                            ..." );
+		System.out.println("The answer for " + x + " MINUS " + y + " is " + (x - y));;
+		System.out.println ( "...                            ..." );
+	}
 	/**
 	 * launching class
 	 */
 	public void launch() {
-		System.out.println ( "Calculator has started!" );
-		System.out.println ( "Please pick from one of the following:" );
-		System.out.println ( "1 For 'Adding'" );
-		System.out.println ( "2 For 'Subtracting'" );
-		System.out.println ( "3 For 'multiplication'" );
-		System.out.println ( "4 For 'division'" );
-		System.out.println ( "0 to close..." );
-		
+		System.out.println ( "...                            ..." );
+		System.out.println ( "... Calculator App is starting ..." );
+		System.out.println ( "...                            ..." );
 		boolean finished = false;
-		
 		do {
-			String str = System.console().readLine();
-			//System.out.println (str);
-		    Integer choice = Integer.parseInt(str);
-    	    switch (choice) {
+			Calculator picker = new Calculator();
+			
+    	    switch ( picker.choice() ) {
     	        case 1:
-    	        // add
-    	        break;
+    	        	// add
+     	    	    picker.setX();
+     	    	    picker.setY();
+    	        	picker.add(picker.getX(), picker.getY());
+    	        	break;  	        
     	        case 2:
-    	        // subtract
+    	        	// subtract
+    	        	// add
+     	    	    picker.setX();
+     	    	    picker.setY();
+    	        	picker.subtract(picker.getX(), picker.getY());
+    	        	break; 
     	        break;
     	        case 3:
     	        // multiply
@@ -46,8 +92,7 @@ public class Calculator {
     	        break;
     	    } 				
 		} while (!finished);
-		
-		System.out.println ( "Calculator App closing down..." );	
+		System.out.println ( "...Calculator App closing down." );	
 	}
 	
 	/**
