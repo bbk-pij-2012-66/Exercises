@@ -1,6 +1,6 @@
 public class Calculator {
-	private double x;
-	private double y;
+	//private double x;
+	//private double y;
 	
 	public int choice() {
 		// Gives a selection of possible parameters
