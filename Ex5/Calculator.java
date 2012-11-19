@@ -4,6 +4,7 @@ public class Calculator {
 	
 	public int choice() {
 		// Gives a selection of possible parameters
+		// test commit
 		System.out.println("Please pick from one of the following:");
 		System.out.println("1 For 'Adding'");
 		System.out.println("2 For 'Subtracting'");
