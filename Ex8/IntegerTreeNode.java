@@ -49,16 +49,17 @@ public class IntegerTreeNode {
 	}
 	
 	// Method 4 the depth of the tree
-	public int getDepth() {
-		int deepness = 1;
+	public int getDepth(int depth) {
+		int deepness = 0;
+		deepness = depth;
 		
 		if (this.left != null) {
-			this.left.getDepth();
+			this.left.getDepth(deepness++);
 		}
 		if (this.right != null) {
-			this.right.getDepth();
+			this.right.getDepth(deepness);
 		}
-		deepness++;
+		//deepness++;
 		
 		return deepness;
 	}

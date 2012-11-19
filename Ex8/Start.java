@@ -13,7 +13,7 @@ public class Start {
 	
 		myTree.add(9);
 		myTree.add(5);
-		myTree.add(3);
+		//myTree.add(3);
 		//myTree.add(8);
 		//myTree.add(11);
 		//myTree.add(12);
@@ -22,7 +22,7 @@ public class Start {
 		System.out.println("Max is " + myTree.getMax());
 		System.out.println("Min is " + myTree.getMin());
 		System.out.println(myTree.toString());
-		System.out.println("The tree is " + myTree.getDepth() + " levels deep");
+		System.out.println("The tree is " + myTree.getDepth(0) + " levels deep");
 	}
 	
 }
