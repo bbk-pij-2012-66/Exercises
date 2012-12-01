@@ -12,18 +12,25 @@ while (running) {
 	print "> ";
 	String str = System.console().readLine();
 	int option = Integer.parseInt(str);
+	
 	if (option == 1 || option == 2) {
-		println "Please enter a binary number to convert:";
-		String str = System.console().readLine();
+		println "Please enter a number to convert:";
+		String stringNum = System.console().readLine();
 	}
+	
 	switch (option) {
-	case 0: running = false;
-	break;
-	case 1: binary2decimal();
-	break;
-	case 2: decimal2binary();
-	break;
-	default: println "Invalid option. Please try again."
+		case 0:
+			running = false;
+			break;
+		case 1:
+			binary2decimal();
+			break;
+		case 2:
+			decimal2binary();
+			break;
+		default:
+			println "Invalid option. Please try again."
+	}
 }
 
 void binary2decimal () {
