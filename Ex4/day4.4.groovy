@@ -18,6 +18,7 @@ while (running) {
 	if (option == 1 || option == 2) {
 		println "Please enter a number to convert:";
 		stringNum = System.console().readLine();
+		print "Converting " + stringNum;
 	}
 	
 	switch (option) {
@@ -28,7 +29,7 @@ while (running) {
 			binary2decimal(stringNum);
 			break;
 		case 2:
-			decimal2binary();
+			decimal2binary(stringNum);
 			break;
 		default:
 			println "Invalid option. Please try again."
@@ -38,7 +39,7 @@ while (running) {
 void binary2decimal (String stringNum) {
 	// take the input and tiems each column by 2 to the power of the column
 	// eg you can find that 100011 = 1 * 2^5 + 1 * 2^1 + 1 * 2^0.
-	println "Converting " + stringNum + " to decimal..."
+	println " to decimal...";
 	
 	int decimal = 0;
 	int numberOfDigits = stringNum.length();
@@ -50,7 +51,7 @@ void binary2decimal (String stringNum) {
 		// println "Char " + i + " is : " + stringNum.charAt(i);
 		// println "2's column " + (numberOfDigits - i) + " is : " + stringNum.charAt(i);
 		
-		//digit = Integer.parseInt(Character.toString(stringNum.charAt(i)));
+		// digit = Integer.parseInt(Character.toString(stringNum.charAt(i)));
 		digit = Character.getNumericValue(stringNum.charAt(i));
 		int power = (numberOfDigits - i);
 		multiplier = 1;		
@@ -65,6 +66,20 @@ void binary2decimal (String stringNum) {
 	println "...the answer is " + decimal + "!"
 }
 
-void decimal2binary () {
-	println "Changing decimal to binary"
+void decimal2binary (String stringNum) {
+	println " to binary...";
+	
+	int decimal = Integer.parseInt(stringNum);
+	int remainder = 0;
+	String str = "";
+	
+	// divide by 2, count the mod as the binary digit
+	// each result is a char from left to right
+	while (decimal != 0) {
+		remainder = decimal % 2;
+		decimal = decimal / 2;
+		// println decimal + " remainder: " + remainder;
+		str = Integer.toString(remainder) + str;		
+	}
+	println "...the answer is " + str + "!"
 }
