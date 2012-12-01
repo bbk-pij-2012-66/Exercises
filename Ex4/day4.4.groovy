@@ -50,8 +50,8 @@ void binary2decimal (String stringNum) {
 		// println "Char " + i + " is : " + stringNum.charAt(i);
 		// println "2's column " + (numberOfDigits - i) + " is : " + stringNum.charAt(i);
 		
-		digit = Integer.parseInt(Character.toString(stringNum.charAt(i)));
-		
+		//digit = Integer.parseInt(Character.toString(stringNum.charAt(i)));
+		digit = Character.getNumericValue(stringNum.charAt(i));
 		int power = (numberOfDigits - i);
 		multiplier = 1;		
 		for (j = 1; j < power; j++) {
