@@ -1,8 +1,8 @@
-public class Book {
+public class Ex2Book {
 	private final String author;
 	private final String title;
 	
-	public Book(String newAuthor, String newTitle) {
+	public Ex2Book(String newAuthor, String newTitle) {
 		this.author = newAuthor;
 		this.title = newTitle;
 	}
