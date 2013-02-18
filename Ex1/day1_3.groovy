@@ -1,7 +1,8 @@
 //day1_3
 String str = System.console().readLine()
 int i = Integer.parseInt(str)
-while (i < 10) {
+while (i < 11) {
+
     i++;
     String newstr = System.console().readLine()
     int j = Integer.parseInt(newstr)
