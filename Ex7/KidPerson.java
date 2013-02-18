@@ -6,7 +6,7 @@ public class KidPerson implements Person {
 	 * Move a distance in a straight line, given in metres
 	 */
 	public void move(int distance) {
-		crawl(distance);
+		crawl(distance); // need a method
 	}
 	
 	/**
