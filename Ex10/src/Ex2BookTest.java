@@ -13,7 +13,7 @@ public class Ex2BookTest {
 		String expectedAuthor = "Terry Pratchett";
 		String expectedTitle = "Guards Guards";
 		assertSame("WTF!", expectedAuthor, inputAuthor);
-		assertSame("Double WTF!!", expectedTitle, inputTitle);
+		assertSame("Triple WTF!!", expectedTitle, inputTitle);
 	}
 
 }
