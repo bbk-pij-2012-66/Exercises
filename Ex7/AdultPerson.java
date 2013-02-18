@@ -9,8 +9,10 @@ public class AdultPerson implements Person {
 	 */
 	public void move(int distance) {
 		if (rightLeg.isHealthy() && leftLeg.isHealthy()) {
+			System.out.println("running");
 			run(distance);
 		} else {
+			System.out.println("walking");
 			walk(distance);
 		}
 	}
