@@ -53,7 +53,7 @@ public class AdultPerson implements Person {
 		//leftLeg.setPeg(true);
 		if (isLeftLeg() && isRightLeg()) {
 			System.out.println("running");
-			//run(distance);
+			run(distance);
 		} else {
 			System.out.println("walking");
 			walk(distance);
