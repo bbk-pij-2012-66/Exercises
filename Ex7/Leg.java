@@ -1,10 +1,11 @@
 
 public class Leg {
-	private boolean peg;
+	//private boolean peg;
 	// extra comment
 	public boolean isHealthy() {
-		if (peg);
-		return peg;
+		//if (peg);
+		System.out.println("got here");
+		return true;
 	}
-
+	
 }

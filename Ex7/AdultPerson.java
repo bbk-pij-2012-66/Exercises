@@ -8,9 +8,11 @@ public class AdultPerson implements Person {
 	 * Move a distance in a straight line, given in metres
 	 */
 	public void move(int distance) {
+		System.out.println(rightLeg.isHealthy());
+		System.out.println(leftLeg.isHealthy());
 		if (rightLeg.isHealthy() && leftLeg.isHealthy()) {
 			System.out.println("running");
-			run(distance);
+			//run(distance);
 		} else {
 			System.out.println("walking");
 			walk(distance);
@@ -48,5 +50,6 @@ public class AdultPerson implements Person {
 	public void setEnergy(int energy) {
 		this.energy = energy;
 	}
+
 	
 }
