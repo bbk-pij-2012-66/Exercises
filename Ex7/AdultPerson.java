@@ -26,13 +26,27 @@ public class AdultPerson implements Person {
 	
 	private void run(int distance) {
 		situation = situation + distance;
-		energy--;
+		setEnergy(getEnergy() - 1);
 	}
 	
 	private void walk(int distance) {
 		for (int i = 0; i < distance; i++) {
 			situation++;
 		}
+	}
+
+	/**
+	 * @return the energy
+	 */
+	public int getEnergy() {
+		return energy;
+	}
+
+	/**
+	 * @param energy the energy to set
+	 */
+	public void setEnergy(int energy) {
+		this.energy = energy;
 	}
 	
 }
