@@ -4,6 +4,14 @@ public class AdultPerson implements Person {
 	private boolean leftLeg;
 	private boolean rightLeg;
 	
+	public AdultPerson() {
+		this.situation = 36;
+		this.energy = 50;
+		this.leftLeg = false;
+		this.rightLeg = true;
+	}
+
+	
 	/**
 	 * @return the situation
 	 */
