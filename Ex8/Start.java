@@ -13,10 +13,10 @@ public class Start {
 	
 		myTree.add(9);
 		myTree.add(5);
-		//myTree.add(3);
-		//myTree.add(8);
-		//myTree.add(11);
-		//myTree.add(12);
+		myTree.add(3);
+		myTree.add(8);
+		myTree.add(11);
+		myTree.add(12);
 		
 		//System.out.println(myTree.contains(9));
 		System.out.println("Max is " + myTree.getMax());
