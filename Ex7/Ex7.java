@@ -2,7 +2,8 @@
 public class Ex7 {
 
 	public void launch() {
-		Person Jimbo = new AdultPerson();
+		AdultPerson Jimbo = new AdultPerson();
+		Jimbo.leftLeg(true);
 		Jimbo.say("Howdy Stranger");
 		Jimbo.move(20);
 	}
