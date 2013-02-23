@@ -1,8 +1,48 @@
 public class AdultPerson implements Person {
 	private int situation;
 	private int energy;
-	private Leg leftLeg;
-	private Leg rightLeg;
+	private boolean leftLeg;
+	private boolean rightLeg;
+	
+	/**
+	 * @return the situation
+	 */
+	public int getSituation() {
+		return situation;
+	}
+
+	/**
+	 * @param situation the situation to set
+	 */
+	public void setSituation(int situation) {
+		this.situation = situation;
+	}
+
+	/**
+	 * @return the rightLeg
+	 */
+	public boolean isRightLeg() {
+		return rightLeg;
+	}
+
+	/**
+	 * @param rightLeg the rightLeg to set
+	 */
+	public void setRightLeg(boolean rightLeg) {
+		this.rightLeg = rightLeg;
+	}
+
+	/**
+	 * @return the leftLeg
+	 */
+	public boolean isLeftLeg() {
+		return leftLeg;
+	}
+
+	public void setLeftLeg(boolean leftLeg) {
+		// TODO Auto-generated method stub
+		this.leftLeg = leftLeg;
+	}
 	
 	/**
 	 * Move a distance in a straight line, given in metres
@@ -11,7 +51,7 @@ public class AdultPerson implements Person {
 		
 		//rightLeg.setPeg(true);
 		//leftLeg.setPeg(true);
-		if (rightLeg.isHealthy() && leftLeg.isHealthy()) {
+		if (isLeftLeg() && isRightLeg()) {
 			System.out.println("running");
 			//run(distance);
 		} else {
@@ -52,10 +92,6 @@ public class AdultPerson implements Person {
 		this.energy = energy;
 	}
 
-	public void setLeftLeg(boolean peg) {
-		// TODO Auto-generated method stub
-		this.leftLeg = peg;
-	}
 
 	
 }

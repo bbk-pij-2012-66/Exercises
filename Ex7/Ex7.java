@@ -3,9 +3,11 @@ public class Ex7 {
 
 	public void launch() {
 		AdultPerson Jimbo = new AdultPerson();
-		Jimbo.leftLeg(true);
+		Jimbo.setLeftLeg(true);
+		Jimbo.setRightLeg(true);
 		Jimbo.say("Howdy Stranger");
 		Jimbo.move(20);
+		System.out.println("finished");
 	}
 	
 	/**
