@@ -1,4 +1,3 @@
-import java.util.*;
 
 public class TextLoop implements Runnable {
 	public static final int COUNT = 10;
