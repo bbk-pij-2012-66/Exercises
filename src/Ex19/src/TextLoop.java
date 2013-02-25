@@ -1,3 +1,5 @@
+package Ex19.src;
+
 
 public class TextLoop implements Runnable {
 	public static final int COUNT = 10;
@@ -16,11 +18,15 @@ public class TextLoop implements Runnable {
 	}
 	
 	public static void main(String args[]) {
-		if (args.length < 1 || (!args[0].equals("0") && !args[0].equals("1"))) {
-			System.out.println("USAGE: java TextLoop <mode>");
-			System.out.println(" mode 0: without threads");
-			System.out.println(" mode 1: with threads");
-		} else if (args[0].equals("0")) {
+//		if (args.length < 1 || (!args[0].equals("0") && !args[0].equals("1"))) {
+//			System.out.println("USAGE: java TextLoop <mode>");
+//			System.out.println(" mode 0: without threads");
+//			System.out.println(" mode 1: with threads");
+//		} else if (args[0].equals("0"))
+//	
+		String arg = "0";
+		if(arg.equals("0"))
+		{
 			for (int i = 0; i < 10; i++) {
 				Runnable r = new TextLoop("Thread " + i);
 				r.run();
@@ -32,6 +38,7 @@ public class TextLoop implements Runnable {
 				t.start();
 			}
 		}
+		System.out.println("finished");
 	}
 }
 

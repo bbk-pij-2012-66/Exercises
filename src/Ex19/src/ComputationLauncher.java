@@ -1,3 +1,5 @@
+package Ex19.src;
+
 /**
  * This class launched two heavy computations
  * sequentially first, then in parallel. 
@@ -28,6 +30,7 @@ public class ComputationLauncher {
     public static void main(String args[]) {
 	  ComputationLauncher c = new ComputationLauncher();
 	  c.launch();
+	  System.out.println("finished");
     }
    
     private double[] createArray(int size) {
